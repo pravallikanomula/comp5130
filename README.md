@@ -1,84 +1,71 @@
+# Comp5130
 
-Full-Stack Estate Application
+# Full-Stack Estate Application
 
-Overview
-
+## Overview
 A comprehensive web application for real estate listings. Users can register, log in, create posts, and interact with other users through real-time chat. The app is responsive and optimized for various screen sizes, providing a seamless experience across devices.
 
-Features
+## Features
+- **User authentication and role-based authorization**.
+- **Create, read, update, and delete (CRUD) operations for posts**.
+- **Real-time chat and notifications**.
+- **Responsive design** with support for major browsers.
+- **Secure API integration** using HTTPS and JWT authentication.
 
-User authentication and role-based authorization.
+## Installation
 
-Create, read, update, and delete (CRUD) operations for posts.
+### Prerequisites
+- **Node.js** (v16+)
+- **npm** (v8+)
+- **MongoDB instance**
 
-Real-time chat and notifications.
+### Steps
+1. **Clone the repository**:
+   ```bash
+   git clone <repository_url>
+   cd <project_directory>
+   ```
 
-Responsive design with support for major browsers.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-Secure API integration using HTTPS and JWT authentication.
+3. **Configure environment variables**:
+   - Create a `.env` file in the root directory with the following:
+     ```
+     MONGO_URI=<your_mongo_connection_string>
+     JWT_SECRET=<your_secret_key>
+     PORT=8800
+     ```
 
-Installation
+4. **Start the backend server**:
+   ```bash
+   npm start
+   ```
 
-Prerequisites
+5. **Start the frontend development server**:
+   ```bash
+   npm run dev
+   ```
 
-Node.js (v16+)
+## Usage
+- Access the app at [https://localhost:5173](https://localhost:5173).
+- Register or log in to explore features.
+- Create new posts, interact with other users, and explore listings.
 
-npm (v8+)
+## System Requirements
+- **Browser**: Chrome, Firefox, Edge, or Safari (latest versions)
+- **OS**: Windows 10+, macOS 11+, Linux (Ubuntu 20.04+)
 
-MongoDB instance
+## Known Issues
+- Minor responsiveness issues on older Safari versions.
+- Notifications may delay under high traffic.
 
-Steps
-
-Clone the repository:
-
-git clone <repository_url>
-cd <project_directory>
-
-Install dependencies:
-
-npm install
-
-Configure environment variables:
-
-Create a .env file in the root directory with the following:
-
-MONGO_URI=<your_mongo_connection_string>
-JWT_SECRET=<your_secret_key>
-PORT=8800
-
-Start the backend server:
-
-npm start
-
-Start the frontend development server:
-
-npm run dev
-
-Usage
-
-Access the app at https://localhost:5173.
-
-Register or log in to explore features.
-
-Create new posts, interact with other users, and explore listings.
-
-System Requirements
-
-Browser: Chrome, Firefox, Edge, or Safari (latest versions)
-
-OS: Windows 10+, macOS 11+, Linux (Ubuntu 20.04+)
-
-Known Issues
-
-Minor responsiveness issues on older Safari versions.
-
-Notifications may delay under high traffic.
-
-Contributing
-
+## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-License
-
+## License
 This project is licensed under the MIT License. See LICENSE for more details.
 
+---
