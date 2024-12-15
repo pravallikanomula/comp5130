@@ -9,6 +9,9 @@ import testRoute from "./routes/test.route.js";
 import userRoute from "./routes/user.route.js";
 import chatRoute from "./routes/chat.route.js";
 import messageRoute from "./routes/message.route.js";
+import https from "https";
+import fs from "fs";
+import path from "path";
 
 
 const app = express();
@@ -24,6 +27,15 @@ app.use("/api/test", testRoute);
 app.use("/api/chats", chatRoute);
 app.use("/api/messages", messageRoute);
 
-app.listen(8800, () => {
-  console.log("Server is running!");
+const sslServer = https.createServer(
+  {
+    key: fs.readFileSync(path.resolve("/Users/nomulapravallika/Downloads/full-stack-estate-main3copy/api/certs/localhost-key.pem"), "utf8"),
+    cert: fs.readFileSync(path.resolve("/Users/nomulapravallika/Downloads/full-stack-estate-main3copy/api/certs/localhost.pem"), "utf8"),
+  },
+  app
+);
+
+sslServer.listen(8800, () => { 
+  console.log('Secure server on port 8800');
 });
+

@@ -46,6 +46,9 @@ function Chat({ chats }) {
         receiverId: chat.receiver.id,
         data: res.data,
       });
+
+      // Focus on the textarea after sending a message
+      messageEndRef.current.scrollIntoView({ behavior: "smooth" });
     } catch (err) {
       console.log(err);
     }
@@ -68,6 +71,7 @@ function Chat({ chats }) {
         }
       });
     }
+
     return () => {
       socket.off("getMessage");
     };
@@ -76,8 +80,8 @@ function Chat({ chats }) {
   return (
     <div className="chat">
       <div className="messages">
-        <h1>Messages</h1>
-        {chats?.map((c) => (
+        <h1></h1>
+        <img src="/pict.png" alt="" />        {chats?.map((c) => (
           <div
             className="message"
             key={c.id}
@@ -99,7 +103,7 @@ function Chat({ chats }) {
         <div className="chatBox">
           <div className="top">
             <div className="user">
-              <img src={chat.receiver.avatar || "noavatar.jpg"} alt="" />
+              <img src={chat.receiver.avatar || "/noavatar.jpg"} alt="" />
               {chat.receiver.username}
             </div>
             <span className="close" onClick={() => setChat(null)}>
@@ -127,8 +131,8 @@ function Chat({ chats }) {
             <div ref={messageEndRef}></div>
           </div>
           <form onSubmit={handleSubmit} className="bottom">
-            <textarea name="text"></textarea>
-            <button>Send</button>
+            <textarea name="text" placeholder="Type a message..." autoFocus></textarea>
+            <button type="submit">Send</button>
           </form>
         </div>
       )}

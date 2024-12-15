@@ -1,0 +1,49 @@
+.agents-page {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px;
+    background-color: #eef5ff;
+    color: #333;
+  
+    .text-content {
+      flex: 1;
+      max-width: 600px;
+  
+      h1 {
+        font-size: 2.8rem;
+        color: #007acc;
+        margin-bottom: 20px;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 15px;
+          font-size: 1.2rem;
+  
+          &::before {
+            content: "•";
+            color: #007acc;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  
+    .image-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  
