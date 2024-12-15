@@ -22,8 +22,8 @@ A comprehensive web application for real estate listings. Users can register, lo
 ### Steps
 1. **Clone the repository**:
    ```bash
-   git clone <repository_url>
-   cd <project_directory>
+   git clone https://github.com/pravallikanomula/comp5130
+   cd comp5130
    ```
 
 2. **Install dependencies**:
